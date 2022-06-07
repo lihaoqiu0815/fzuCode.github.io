@@ -949,7 +949,7 @@
       }, i = {class: "login", id: "form", ref: "backGroundColor"}, a = {class: "weather"}, c = o((function () {
         return Object(r["i"])("div", {class: "city"}, "福州", -1)
       })), s = {class: "temp1"}, u = {class: "temp2"}, f = {key: 0, class: "login_form"}, l = {class: "scroll"},
-      h = Object(r["j"])(" 选择滚动——"), p = Object(r["j"])(), d = {class: "move_item"}, m = Object(r["j"])(" Login "),
+      h = Object(r["j"])(" 选择滚动"), p = Object(r["j"])(), d = {class: "move_item"}, m = Object(r["j"])(" Login "),
       v = o((function () {
         return Object(r["i"])("div", null, [Object(r["i"])("span", {style: {"font-size": "18px"}}, "github Link"), Object(r["j"])(" ："), Object(r["i"])("a", {href: "https://github.com/qirong77/TS.github.io"}, "GitHub"), Object(r["i"])("div", null, [Object(r["i"])("span", {style: {"font-size": "12px"}}, "-机检无反应")]), Object(r["i"])("div", null, [Object(r["i"])("span", {style: {"font-size": "12px"}}, "-不会收集任何个人信息")]), Object(r["i"])("div", null, [Object(r["i"])("span", {style: {"font-size": "12px"}}, "-不再更新")])], -1)
       }));
