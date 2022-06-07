@@ -18,7 +18,6 @@
     <div @click="showPopup" class="text"  :style="{opacity: bottom_txt? 0:1}">使 用 须 知</div>
     <van-popup v-model:show="show">
       <div>
-       <span style="font-size: 18px">github Link</span> ：<a  href="https://github.com/qirong77/TS.github.io">GitHub</a>
         <div><span style="font-size: 12px">-机检无反应</span></div>
           <div><span  style="font-size: 12px">-不会收集任何个人信息</span></div>
         <div><span style="font-size: 12px" >-不再更新</span></div>
