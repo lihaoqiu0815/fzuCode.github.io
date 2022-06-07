@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>福州大学一码通</title>
+    <link rel="stylesheet" href="font_2849870_vfzdmtn3jgn/iconfont.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="login.css">
+    <script src="flexible的副本.js"></script>
+</head>
+<body>
+    <div class="bbb"></div>
+    <div class="bgc">
+        <div class="nav">
+            <div class="name1">姓名</div>
+            <div class="name2">学院</div>
+        </div>
+        <div class="logo">
+            <img src="login/logo@2x.png" alt="">
+        </div>
+        <div class="main">
+            <div class="zebra">
+                <img src="login/条形二维码@2x.png" alt="">
+            </div>
+            <div class="time"></div>
+            <div class="zebra-2">
+                <img src="login/方形二维码@2x.png" alt="">
+            </div>
+            <div class="free">自由</div>
+            <div class="caption">未见异常，允许出行，请出动出示，配合检测，并做好自我防护，出行前请确认。</div>
+            <div class="car">
+                <img src="login/图层3@2x.png" alt="">
+                <div>
+                    <div>一卡通</div>
+                    <div>适用所有场景</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">每日健康填报</div>
+    </div>
+    <div class="arrow">
+        <i class="iconfont icon-fanhui"></i>
+    </div>
+    <script>
+        //
+        var free = document.querySelector('.free');
+        free.innerHTML = localStorage.getItem('name2')
+        var s = free.offsetLeft;
+        var d= free.clientWidth;
+        console.log(free.offsetWidth)
+        var w = d;
+        function animate(obj) {
+            var timer = setInterval(function() {
+                if (obj.offsetLeft < -w) {
+                    obj.style.left = s + 'px';
+                }
+                obj.style.left = obj.offsetLeft - 4 + 'px';
+            }, 50);
+        }
+        animate(free);
+        //
+        function setTime() {
+            var date = new Date();
+            var month = date.getMonth();
+            month = month + 1;
+            month = month < 10 ? '0' + month : month;
+            var datas = date.getDate();
+            datas = datas < 10 ? '0' + datas : datas; 
+            var h = date.getHours();
+            h = h < 10 ? '0' + h :h;
+            var m = date.getMinutes();
+            m = m < 10 ? '0' + m :m
+            var s = date.getSeconds();
+            s = s < 10 ? '0' + s : s;
+            var t = document.querySelector('.time');
+            t.innerHTML = month + '月' + datas +'日 ' + '<span>' + s + '</span>' +  ' ' + h  + ':' + m ;
+        }
+        setInterval(setTime, 1000);
+        var name1 = document.querySelector('.name1');
+        var name2 = document.querySelector('.name2');
+        var name3 = localStorage.getItem('name');
+        var study = localStorage.getItem('study');
+        name1.innerHTML = '姓名: ' + name3 ;
+        name2.innerHTML = '部门: ' + study;
+        var i = document.querySelector('i');
+        i.addEventListener('click', function() {
+            location.href = 'main.html';
+        })
+    </script>
+</body>
+</html
